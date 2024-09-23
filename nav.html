@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="color-scheme" content="light only">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <title>Главная</title>
+</head>
+
+
+<style>
+    .wrapper a {
+        font-size: 30px;
+        text-transform: capitalize;
+    }
+
+    .wrapper button {
+        margin-bottom: 25px;
+        width: 300px;
+        height: 45px;
+    }
+</style>
+
+<body class="m-page">
+
+    <div class="wrapper" style="padding: 50px;">
+        <a href="index.html" style="display: block; margin-bottom: 20px;">
+            Главная
+        </a>
+
+
+
+
+        <button style="border: 2px solid #000;margin-bottom: 20px;" data-bs-toggle="modal" data-bs-target="#quickOrder">
+            Быстрый заказ
+        </button>
+
+
+        <code>
+
+            @@include
+            ('components/page-blocks/_filter-slider.html',{ <br>
+            "start1":"0", <br>
+            "start2":"30000", <br>
+            "min":"1000", <br>
+            "max":"100000", <br>
+            })
+
+        </code>
+    </div>
+
+
+
+
+
+
+
+
+    <!--  -->
+    <div class="modal" id="confModal">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <div class="modal__close">
+                <button class="close-btn _close-modal">
+                    <img src="img/close.svg" alt="">
+                </button>
+            </div>
+            <div class="text">
+
+                <p>
+                    Предоставляя свои персональные данные Пользователь даёт согласие на обработку, хранение и использование своих персональных данных на основании ФЗ № 152-ФЗ «О персональных данных» от 27.07.2006 г. в следующих целях:
+                </p>
+
+                <ul>
+                    <li>Осуществление клиентской поддержки;</li>
+                    <li>Проведения аудита и прочих внутренних маркетинговых исследований</li>
+                </ul>
+
+                <p>
+                    Под персональными данными подразумевается любая информация личного характера, позволяющая установить личность Пользователя/Покупателя такая как:
+                </p>
+
+                <ul>
+                    <li>Фамилия, Имя, Отчество;</li>
+                    <li>Контактный телефон;</li>
+                    <li>Адрес электронной почты.</li>
+                </ul>
+
+                <p>
+                    Персональные данные Пользователей хранятся исключительно на электронных носителях и обрабатываются с использованием автоматизированных систем, за исключением случаев, когда неавтоматизированная обработка персональных данных необходима в связи с исполнением требований законодательства. <br>
+                Компания обязуется не передавать полученные персональные данные третьим лицам, за исключением следующих случаев:
+                </p>
+
+                <p>
+                    По запросам уполномоченных органов государственной власти РФ только по основаниям и в порядке, установленным законодательством РФ; <br>
+                Стратегическим партнерам, которые работают с Компанией для предоставления продуктов и услуг, или тем из них, которые помогают Компании реализовывать продукты и услуги потребителям. Мы предоставляем третьим лицам минимальный объем персональных данных, необходимый только для оказания требуемой услуги или проведения необходимой транзакции.
+                </p>
+
+                <p>
+                    Компания оставляет за собой право вносить изменения в одностороннем порядке в настоящие правила, при условии, что изменения не противоречат действующему законодательству РФ. Изменения условий настоящих правил вступают в силу после их публикации на Сайте
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/swiper-bundle.min.js"></script>
+    <script type="x-shader/x-fragment" id="vertShader">
+        precision mediump float;
+
+    varying vec2 vUv;
+    attribute vec2 a_position;
+
+    void main() {
+        vUv = .5 * (a_position + 1.);
+        gl_Position = vec4(a_position, 0.0, 1.0);
+    }
+</script>
+    <script type="x-shader/x-fragment" id="fragShader">
+        precision mediump float;
+
+    varying vec2 vUv;
+    uniform float u_time;
+    uniform float u_ratio;
+    uniform vec2 u_pointer_position;
+    uniform float u_scroll_progress;
+
+    vec2 rotate(vec2 uv, float th) {
+        return mat2(cos(th), sin(th), -sin(th), cos(th)) * uv;
+    }
+
+    float neuro_shape(vec2 uv, float t, float p) {
+        vec2 sine_acc = vec2(0.);
+        vec2 res = vec2(0.);
+        float scale = 8.;
+
+        for (int j = 0; j < 15; j++) {
+            uv = rotate(uv, 1.);
+            sine_acc = rotate(sine_acc, 1.);
+            vec2 layer = uv * scale + float(j) + sine_acc - t;
+            sine_acc += sin(layer);
+            res += (.5 + .5 * cos(layer)) / scale;
+            scale *= (1.2 - .07 * p);
+        }
+        return res.x + res.y;
+    }
+
+    void main() {
+        vec2 uv = .5 * vUv;
+        uv.x *= u_ratio;
+
+        vec2 pointer = vUv - u_pointer_position;
+        pointer.x *= u_ratio;
+        float p = clamp(length(pointer), 0., 3.);
+        p = .5 * pow(1. - p, 2.);
+
+        float t = .0006 * u_time;
+        vec3 color = vec3(0.);
+
+        float noise = neuro_shape(uv, t, p);
+
+        noise = 1.0 * pow(noise, 4.);
+        noise += pow(noise, 3.);
+        noise = max(.0, noise - .3);
+        noise *= (1. - length(vUv - .1));
+
+        color = normalize(vec3(.1, .2 + .0, .8 + .8));
+
+        color = color * noise;
+
+        gl_FragColor = vec4(color, noise);
+    }
+</script>
+    <script src="js/main.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="color-scheme" content="light only">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <title>Главная</title>
+</head>
+
+<body class="m-page">
+    <header class="header">
+        <a href="" class="header__logo">
+            <img src="img/logo2.svg" alt="">
+        </a>
+
+        <button class="burger _toggle-menu">
+            <img src="img/burger.svg" alt="" class="_view1">
+            <img src="img/burger2.svg" alt="" class="_view2">
+        </button>
+
+        <div class="menu">
+            <div class="menu__scroll">
+                <nav class="nav">
+                    <ul>
+                        <li><a href="" data-slide="1">Преимущества</a></li>
+                        <li><a href="" data-slide="2">Мобильные решения</a></li>
+                        <li><a href="" data-slide="7">Свяжитесь с нами</a></li>
+                    </ul>
+                </nav>
+
+                <div class="socials">
+                    <a href="" class="socials__item">
+                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M34.6076 17.8412C34.6076 27.1011 27.101 34.6077 17.8411 34.6077C8.58122 34.6077 1.07462 27.1011 1.07462 17.8412C1.07462 8.58132 8.58122 1.07471 17.8411 1.07471C27.101 1.07471 34.6076 8.58132 34.6076 17.8412ZM18.4274 13.4437C16.7941 14.1277 13.5413 15.5377 8.65513 17.6597C7.87335 17.9808 7.45453 18.2879 7.41265 18.5951C7.35083 19.1144 8.00087 19.3161 8.87776 19.5882C8.99091 19.6233 9.10784 19.6596 9.22751 19.6979C10.0931 19.9771 11.2378 20.2982 11.8381 20.3122C12.3826 20.3261 12.9829 20.1028 13.653 19.6421C18.218 16.5568 20.5634 14.9933 20.7169 14.9653C20.8286 14.9374 20.9682 14.9095 21.066 14.9933C21.1637 15.077 21.1637 15.2445 21.1497 15.2864C21.0831 15.5639 18.3597 18.0923 17.1204 19.2428C16.8011 19.5392 16.5803 19.7442 16.5288 19.7957C16.3979 19.9304 16.2646 20.058 16.1364 20.1808C15.335 20.9478 14.7337 21.5234 16.1658 22.4621C16.8169 22.8919 17.3421 23.2502 17.8592 23.603C18.4842 24.0294 19.0975 24.4479 19.9072 24.975C20.098 25.1003 20.2807 25.2302 20.4588 25.3569C21.1543 25.8517 21.7818 26.2981 22.5597 26.2314C23.0065 26.1895 23.4672 25.7707 23.7045 24.5143C24.2629 21.5547 25.3518 15.1189 25.6031 12.4664C25.631 12.2431 25.6031 11.9499 25.5752 11.8103C25.5473 11.6707 25.5054 11.4892 25.3379 11.3496C25.1284 11.1821 24.8213 11.1541 24.6817 11.1541C24.0535 11.1681 23.0763 11.5032 18.4274 13.4437Z" fill="white" />
+                        </svg>
+                    </a>
+                    <a href="tel:+79951186046" class="socials__item">
+                        <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.75 1.34326C9.56756 1.34326 2.09328 8.81755 2.09328 18C2.09328 27.1824 9.56756 34.6567 18.75 34.6567C27.9324 34.6567 35.4067 27.1824 35.4067 18C35.4067 8.81755 27.9358 1.34326 18.75 1.34326ZM26.2372 23.9843C25.7541 24.4804 25.2629 24.9749 24.7634 25.4581C24.3633 25.8501 23.8558 25.9363 23.3223 25.8989C22.2812 25.8273 21.3443 25.4207 20.4447 24.9327C18.4423 23.8412 16.7262 22.3805 15.1566 20.7473C13.7659 19.2979 12.5589 17.7152 11.6675 15.9131C11.3227 15.2087 11.0217 14.4849 10.9095 13.7057C10.8005 12.964 10.8932 12.2808 11.5097 11.744C11.918 11.3894 12.2808 10.9779 12.6679 10.5989C13.3348 9.94171 14.192 9.93684 14.8541 10.5907C15.4462 11.1649 16.0236 11.7489 16.5994 12.3312C17.2289 12.9803 17.2289 13.8424 16.5994 14.493C16.4075 14.6931 16.2204 14.9013 16.0041 15.0851C15.6039 15.4186 15.5552 15.822 15.6836 16.2921C15.8414 16.8549 16.1163 17.3543 16.4579 17.8162C17.3786 19.0704 18.4571 20.1439 19.8641 20.8304C20.1894 20.9931 20.5766 21.0435 20.9377 21.1053C21.167 21.1508 21.3704 21.0386 21.5379 20.8678C21.7786 20.6141 22.0291 20.3684 22.2796 20.1261C22.8798 19.534 23.7371 19.5145 24.3406 20.0936C24.9815 20.7052 25.6028 21.3379 26.2226 21.9756C26.5137 22.2716 26.6178 22.579 26.6178 22.8507C26.626 23.3761 26.4975 23.7161 26.2258 23.991L26.2372 23.9843Z" fill="white" />
+                        </svg>
+                    </a>
+                    <a href="mailto:dl@screenl.ru" class="socials__item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="37" height="36" viewBox="0 0 37 36" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M18.4995 1.34326C20.6966 1.34326 22.7942 1.76866 24.7141 2.54121C30.8366 5.00412 35.1571 10.9977 35.1571 18.0008C35.1571 27.201 27.7005 34.6567 18.4995 34.6567C9.30029 34.6567 1.84283 27.201 1.84283 18.0008C1.84283 17.3001 1.88606 16.6092 1.97036 15.9305C2.98847 7.70825 10.0011 1.34326 18.4995 1.34326ZM11.1415 11.3104C10.7008 11.3104 10.2744 11.4559 9.92735 11.7193L18.5001 17.2056L27.0729 11.7193C26.7258 11.4559 26.2994 11.3104 25.8587 11.3104H11.1415ZM27.8655 13.3173C27.8655 13.1542 27.8454 12.9936 27.8069 12.8373L18.8604 18.5636C18.6405 18.7041 18.3595 18.7041 18.1396 18.5636L9.19307 12.8373C9.1546 12.9937 9.13453 13.1542 9.13453 13.3173V22.6827C9.13453 23.2154 9.3461 23.7255 9.72239 24.1018C10.0987 24.4781 10.6088 24.6896 11.1414 24.6896H25.8586C26.3912 24.6896 26.9013 24.4781 27.2776 24.1018C27.6539 23.7255 27.8655 23.2154 27.8655 22.6827V13.3173Z" fill="white" />
+                        </svg>
+                    </a>
+                    <a href="" class="socials__item">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.69403 15.9998C1.69403 7.83766 8.33784 1.19385 16.5 1.19385C24.6651 1.19385 31.306 7.83766 31.306 15.9998C31.306 24.162 24.6622 30.8058 16.5 30.8058C8.33784 30.8058 1.69403 24.162 1.69403 15.9998ZM16.4955 8.03257C16.2056 8.03653 15.9731 8.27299 15.9741 8.56289V9.61352H8.54981C8.26191 9.61649 8.03038 9.84998 8.0284 10.1369C8.02742 10.4268 8.25992 10.6632 8.54981 10.6662H9.11078V19.1253H8.58937C8.29653 19.1243 8.05806 19.3618 8.06006 19.6546C8.06303 19.9445 8.29949 20.177 8.58937 20.176H15.3179L11.8839 24.0339V24.0349C11.7899 24.1398 11.7424 24.2773 11.7514 24.4178C11.7603 24.5583 11.8246 24.6899 11.9304 24.7819C12.1481 24.9718 12.4786 24.9511 12.6705 24.7354L15.9741 21.024V24.393C15.9731 24.6829 16.2056 24.9193 16.4955 24.9223C16.637 24.9233 16.7715 24.8679 16.8714 24.7679C16.9704 24.669 17.0258 24.5335 17.0258 24.393V21.024L20.3294 24.7354H20.3284C20.5213 24.951 20.8508 24.9718 21.0685 24.7819C21.1743 24.6898 21.2396 24.5583 21.2475 24.4178C21.2564 24.2773 21.2089 24.1397 21.1159 24.0349L17.6811 20.176H24.4116C24.7015 20.177 24.938 19.9445 24.941 19.6546C24.9419 19.3618 24.7045 19.1233 24.4116 19.1253H23.8902V10.6662H24.4423C24.7352 10.6672 24.9736 10.4297 24.9716 10.1369C24.9696 9.84603 24.7322 9.61253 24.4423 9.61352H17.0258V8.56287C17.0258 8.42238 16.9704 8.28685 16.8714 8.18789C16.7715 8.08796 16.637 8.03257 16.4955 8.03257Z" fill="white" />
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <div class="menu__bg modal-bg _toggle-menu"></div>
+    </header>
+
+    <div class="page">
+        <div class="page__wrapper">
+            <div class="page__screen screen main">
+                <div class="main__inner">
+                    <div class="main__logo">
+                        <img src="img/logo.svg" alt="">
+                    </div>
+                    <div class="main__desc text18 text14-mob">
+                        Современные мобильные решения для бизнеса на рынке экранов.
+                    </div>
+                </div>
+                <button class="main__next" data-slide="1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="31" viewBox="0 0 24 31" fill="none">
+                        <path d="M13.0149 31H10.9851C5.28591 31 0.640686 26.8709 0.640686 21.805V9.90352C0.640686 4.83758 5.28591 0.708496 10.9851 0.708496H13.0149C18.7141 0.708496 23.3593 4.83758 23.3593 9.90352V21.805C23.3593 26.8709 18.7141 31 13.0149 31ZM10.9851 2.44341C6.3789 2.44341 2.59246 5.77443 2.59246 9.90352V21.805C2.59246 25.9341 6.3789 29.2651 10.9851 29.2651H13.0149C17.6601 29.2651 21.4076 25.8994 21.4076 21.805V9.90352C21.4076 5.77443 17.6211 2.44341 13.0149 2.44341H10.9851Z" fill="white" />
+                        <path d="M16.8404 16.7737C16.489 16.4268 15.8645 16.4268 15.4741 16.7737L12.9759 19.2026V10.3893C12.9759 9.9035 12.5465 9.52182 12 9.52182C11.4535 9.52182 11.0241 9.9035 11.0241 10.3893V19.2373L8.52581 16.8084C8.17449 16.4615 7.54992 16.4615 7.15957 16.8084C6.84728 17.1207 6.84728 17.6065 7.15957 17.9188L11.2973 21.9785C11.6486 22.3254 12.2732 22.3254 12.6636 21.9785L16.8404 17.9188C17.1526 17.5718 17.1526 17.086 16.8404 16.7737Z" fill="white" />
+                    </svg>
+                </button>
+                <canvas class="main__canvas" id="neuro" width="1208" height="910"></canvas>
+            </div>
+            <div class="page__screen screen advantages _radial-bg">
+                <div class="h1 text-center">
+                    ПРОСТЫЕ ПРЕИМУЩЕСТВА
+                </div>
+
+                <div class="advantages-slider slider _center _loop">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="advantage-item">
+                                    <img src="img/advantage-icon.svg" alt="" class="advantage-item__icon">
+                                    <div class="advantage-item__text text16 text14-mob gray-text">
+                                        <span>Быстрый монтаж и демонтаж</span> — до 60 минут с момента попадания оборудования на площадку.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="advantage-item">
+                                    <img src="img/advantage-icon2.svg" alt="" class="advantage-item__icon">
+                                    <div class="advantage-item__text text16 text14-mob gray-text">
+                                        <span>Скорость</span> — возможность менять контент в любой момент.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="advantage-item">
+                                    <img src="img/advantage-icon3.svg" alt="" class="advantage-item__icon">
+                                    <div class="advantage-item__text text16 text14-mob gray-text">
+                                        <span>Мобильность</span> — можно сменить место расположения экранов после их сборки.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+                </div>
+
+                <div class="advantages__img">
+                    <img src="img/advantages.png" alt="">
+                </div>
+            </div>
+            <div class="page__screen screen solution">
+                <div class="solution__text">
+                    <div class="solution__title h2">
+                        Современные мобильные
+                        решения на рынке экранов
+                    </div>
+                    <div class="solution__desc text16">
+                        Аренда быстромонтируемых экранов от одного модуля до
+                        сложных и больших конструкций.
+                    </div>
+                </div>
+                <div class="solution__video">
+                    <video id="video-bg" src="videos/video-bg.mp4" playsinline loop autoplay></video>
+                </div>
+            </div>
+            <div class="page__screen screen modules _radial-bg">
+                <div class="modules__top">
+                    <div class="h2">
+                        Экраны постеры, которые бесшовно могут соединять от двух до шести модулей.
+                    </div>
+                </div>
+
+                <div class="modules-slider slider _center _loop">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide _full">
+                                <div class="module-item">
+                                    <div class="module-item__title text16 gray-text">
+                                        Формат вывода контента
+                                    </div>
+                                    <div class="module-item__bottom _flex">
+                                        <img class="module-item__icon" src="img/module-icon.svg" alt="">
+                                        <span class="module-item__desc text16">
+            HDMI, WIFI, Cloud
+        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="module-item">
+                                    <div class="module-item__title text16 gray-text">
+                                        Физический размер
+                                    </div>
+                                    <div class="module-item__bottom _flex">
+                                        <img class="module-item__icon" src="img/module-icon2.svg" alt="">
+                                        <span class="module-item__desc text16">
+            2055,21х42,6х630,21
+        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="module-item">
+                                    <div class="module-item__title text16 gray-text">
+                                        Шаг
+                                    </div>
+                                    <div class="module-item__bottom _flex">
+                                        <img class="module-item__icon" src="img/module-icon3.svg" alt="">
+                                        <span class="module-item__desc text16">
+            1,81
+        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="module-item">
+                                    <div class="module-item__title text16 gray-text">
+                                        Разрешение одного сегмента
+                                    </div>
+                                    <div class="module-item__bottom _flex">
+                                        <img class="module-item__icon" src="img/module-icon4.svg" alt="">
+                                        <span class="module-item__desc text16">
+            320х1080
+        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="module-item">
+                                    <div class="module-item__title text16 gray-text">
+                                        Тип подключения
+                                    </div>
+                                    <div class="module-item__bottom _flex">
+                                        <img class="module-item__icon" src="img/module-icon5.svg" alt="">
+                                        <span class="module-item__desc text16">
+            220V
+        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+                </div>
+
+                <div class="modules__bg">
+                    <img class="_view1" src="img/modules.webp" alt="">
+                    <img class="_view2" src="img/modules2.png" alt="">
+                </div>
+            </div>
+            <div class="page__screen screen info _radial-bg">
+                <div class="info__text">
+                    <div class="info__title text16">
+                        Шесть модулей соединенных вместе могут организовать мобильный экран в любой точке.
+                    </div>
+                    <div class="info__desc text16">
+                        Например, для совместного просмотра матча диагональю 4.3 метра.
+                    </div>
+                </div>
+                <div class="info__img">
+                    <img src="img/info-img.webp" alt="" class="_view1">
+                    <img src="img/info-img2.webp" alt="" class="_view2">
+                </div>
+            </div>
+            <div class="page__screen screen info info2 _radial-bg">
+                <div class="info__text">
+                    <div class="info__title text16">
+                        Шесть модулей бесшовно соединены в один экран.
+                    </div>
+                    <div class="info__desc text16">
+                        Может быть использован в качестве пресс-волла или декора задней части сцены.
+                    </div>
+                </div>
+                <div class="info__img">
+                    <img src="img/info-img3.webp" alt="" class="_view1">
+                    <img src="img/info-img4.webp" alt="" class="_view2">
+                </div>
+            </div>
+            <div class="page__screen screen info info3 _radial-bg">
+                <div class="info__text">
+                    <div class="info__title text16">
+                        Из модулей выстраивается коридор или другая конструкция.
+                    </div>
+                    <div class="info__desc text16">
+                        Расположение и вид можно менять
+                        во время монтажа и мероприятия.
+                    </div>
+                </div>
+                <div class="info__img">
+                    <img src="img/info-img5.webp" alt="" class="_view1">
+                    <img src="img/info-img6.webp" alt="" class="_view2">
+                </div>
+            </div>
+            <div class="page__screen screen contacts">
+                <div class="contacts__inner">
+                    <div class="contacts__text">
+                        <div class="h1">
+                            свяжитесь с нами
+                        </div>
+                        <div class="contacts__desc text16 gray-text">
+                            Можно бесконечно рассматривать кейсы, но лучше познакомиться. <br>
+                            Расскажем о деталях и реальных возможностях для вас.
+                        </div>
+                    </div>
+                    <form action="" class="contacts-form">
+                        <div class="contacts-form__grid">
+                            <div class="fg">
+                                <input type="text" placeholder="Ваше имя">
+                            </div>
+                            <div class="fg">
+                                <input type="tel" placeholder="Ваш телефон">
+                            </div>
+                            <div class="fg _full">
+                                <textarea placeholder="Какую задачу вы хотели бы решить вместе с нами?"></textarea>
+                            </div>
+                        </div>
+                        <div class="contacts-form__bottom _flex-between">
+                            <div class="m-check gray-text">
+                                <input type="checkbox">
+                                <label>
+                                    <span>
+                                        Принимаю условия <a href="" data-modal="confModal">пользовательского соглашения</a>
+                                    </span>
+                                </label>
+                            </div>
+                            <button class="contacts-form__btn m-btn m-btn-blue">
+                                <span>Отправить заявку</span>
+                                <img src="img/arrow-right.svg" alt="">
+                            </button>
+                        </div>
+                    </form>
+                    <div class="contacts__presentation">
+                        <div class="text16 gray-text">
+                            Также вы можете ознакомиться с нашей презентацией
+                        </div>
+                        <a href="" class="text16 underline-text semi-bold-text">
+                            Скачать презентацию
+                        </a>
+                    </div>
+                    <div class="contacts__bottom">
+                        <div class="contacts__items">
+                            <a href="" class="contact-item">
+                                <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M34.6076 17.8412C34.6076 27.1011 27.101 34.6077 17.8411 34.6077C8.58122 34.6077 1.07462 27.1011 1.07462 17.8412C1.07462 8.58132 8.58122 1.07471 17.8411 1.07471C27.101 1.07471 34.6076 8.58132 34.6076 17.8412ZM18.4274 13.4437C16.7941 14.1277 13.5413 15.5377 8.65513 17.6597C7.87335 17.9808 7.45453 18.2879 7.41265 18.5951C7.35083 19.1144 8.00087 19.3161 8.87776 19.5882C8.99091 19.6233 9.10784 19.6596 9.22751 19.6979C10.0931 19.9771 11.2378 20.2982 11.8381 20.3122C12.3826 20.3261 12.9829 20.1028 13.653 19.6421C18.218 16.5568 20.5634 14.9933 20.7169 14.9653C20.8286 14.9374 20.9682 14.9095 21.066 14.9933C21.1637 15.077 21.1637 15.2445 21.1497 15.2864C21.0831 15.5639 18.3597 18.0923 17.1204 19.2428C16.8011 19.5392 16.5803 19.7442 16.5288 19.7957C16.3979 19.9304 16.2646 20.058 16.1364 20.1808C15.335 20.9478 14.7337 21.5234 16.1658 22.4621C16.8169 22.8919 17.3421 23.2502 17.8592 23.603C18.4842 24.0294 19.0975 24.4479 19.9072 24.975C20.098 25.1003 20.2807 25.2302 20.4588 25.3569C21.1543 25.8517 21.7818 26.2981 22.5597 26.2314C23.0065 26.1895 23.4672 25.7707 23.7045 24.5143C24.2629 21.5547 25.3518 15.1189 25.6031 12.4664C25.631 12.2431 25.6031 11.9499 25.5752 11.8103C25.5473 11.6707 25.5054 11.4892 25.3379 11.3496C25.1284 11.1821 24.8213 11.1541 24.6817 11.1541C24.0535 11.1681 23.0763 11.5032 18.4274 13.4437Z" fill="white" />
+                                </svg>
+                                <span>screenls</span>
+                            </a>
+                            <a href="tel:+79951186046" class="contact-item">
+                                <svg width="37" height="36" viewBox="0 0 37 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M18.75 1.34326C9.56756 1.34326 2.09328 8.81755 2.09328 18C2.09328 27.1824 9.56756 34.6567 18.75 34.6567C27.9324 34.6567 35.4067 27.1824 35.4067 18C35.4067 8.81755 27.9358 1.34326 18.75 1.34326ZM26.2372 23.9843C25.7541 24.4804 25.2629 24.9749 24.7634 25.4581C24.3633 25.8501 23.8558 25.9363 23.3223 25.8989C22.2812 25.8273 21.3443 25.4207 20.4447 24.9327C18.4423 23.8412 16.7262 22.3805 15.1566 20.7473C13.7659 19.2979 12.5589 17.7152 11.6675 15.9131C11.3227 15.2087 11.0217 14.4849 10.9095 13.7057C10.8005 12.964 10.8932 12.2808 11.5097 11.744C11.918 11.3894 12.2808 10.9779 12.6679 10.5989C13.3348 9.94171 14.192 9.93684 14.8541 10.5907C15.4462 11.1649 16.0236 11.7489 16.5994 12.3312C17.2289 12.9803 17.2289 13.8424 16.5994 14.493C16.4075 14.6931 16.2204 14.9013 16.0041 15.0851C15.6039 15.4186 15.5552 15.822 15.6836 16.2921C15.8414 16.8549 16.1163 17.3543 16.4579 17.8162C17.3786 19.0704 18.4571 20.1439 19.8641 20.8304C20.1894 20.9931 20.5766 21.0435 20.9377 21.1053C21.167 21.1508 21.3704 21.0386 21.5379 20.8678C21.7786 20.6141 22.0291 20.3684 22.2796 20.1261C22.8798 19.534 23.7371 19.5145 24.3406 20.0936C24.9815 20.7052 25.6028 21.3379 26.2226 21.9756C26.5137 22.2716 26.6178 22.579 26.6178 22.8507C26.626 23.3761 26.4975 23.7161 26.2258 23.991L26.2372 23.9843Z" fill="white" />
+                                </svg>
+                                <span>+7 (995) 118-60-46</span>
+                            </a>
+                            <a href="mailto:dl@screenl.ru" class="contact-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="37" height="36" viewBox="0 0 37 36" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18.4995 1.34326C20.6966 1.34326 22.7942 1.76866 24.7141 2.54121C30.8366 5.00412 35.1571 10.9977 35.1571 18.0008C35.1571 27.201 27.7005 34.6567 18.4995 34.6567C9.30029 34.6567 1.84283 27.201 1.84283 18.0008C1.84283 17.3001 1.88606 16.6092 1.97036 15.9305C2.98847 7.70825 10.0011 1.34326 18.4995 1.34326ZM11.1415 11.3104C10.7008 11.3104 10.2744 11.4559 9.92735 11.7193L18.5001 17.2056L27.0729 11.7193C26.7258 11.4559 26.2994 11.3104 25.8587 11.3104H11.1415ZM27.8655 13.3173C27.8655 13.1542 27.8454 12.9936 27.8069 12.8373L18.8604 18.5636C18.6405 18.7041 18.3595 18.7041 18.1396 18.5636L9.19307 12.8373C9.1546 12.9937 9.13453 13.1542 9.13453 13.3173V22.6827C9.13453 23.2154 9.3461 23.7255 9.72239 24.1018C10.0987 24.4781 10.6088 24.6896 11.1414 24.6896H25.8586C26.3912 24.6896 26.9013 24.4781 27.2776 24.1018C27.6539 23.7255 27.8655 23.2154 27.8655 22.6827V13.3173Z" fill="white" />
+                                </svg>
+                                <span>dl@screenl.ru</span>
+                            </a>
+                            <a href="" class="contact-item contact-item--presentation">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.69403 15.9998C1.69403 7.83766 8.33784 1.19385 16.5 1.19385C24.6651 1.19385 31.306 7.83766 31.306 15.9998C31.306 24.162 24.6622 30.8058 16.5 30.8058C8.33784 30.8058 1.69403 24.162 1.69403 15.9998ZM16.4955 8.03257C16.2056 8.03653 15.9731 8.27299 15.9741 8.56289V9.61352H8.54981C8.26191 9.61649 8.03038 9.84998 8.0284 10.1369C8.02742 10.4268 8.25992 10.6632 8.54981 10.6662H9.11078V19.1253H8.58937C8.29653 19.1243 8.05806 19.3618 8.06006 19.6546C8.06303 19.9445 8.29949 20.177 8.58937 20.176H15.3179L11.8839 24.0339V24.0349C11.7899 24.1398 11.7424 24.2773 11.7514 24.4178C11.7603 24.5583 11.8246 24.6899 11.9304 24.7819C12.1481 24.9718 12.4786 24.9511 12.6705 24.7354L15.9741 21.024V24.393C15.9731 24.6829 16.2056 24.9193 16.4955 24.9223C16.637 24.9233 16.7715 24.8679 16.8714 24.7679C16.9704 24.669 17.0258 24.5335 17.0258 24.393V21.024L20.3294 24.7354H20.3284C20.5213 24.951 20.8508 24.9718 21.0685 24.7819C21.1743 24.6898 21.2396 24.5583 21.2475 24.4178C21.2564 24.2773 21.2089 24.1397 21.1159 24.0349L17.6811 20.176H24.4116C24.7015 20.177 24.938 19.9445 24.941 19.6546C24.9419 19.3618 24.7045 19.1233 24.4116 19.1253H23.8902V10.6662H24.4423C24.7352 10.6672 24.9736 10.4297 24.9716 10.1369C24.9696 9.84603 24.7322 9.61253 24.4423 9.61352H17.0258V8.56287C17.0258 8.42238 16.9704 8.28685 16.8714 8.18789C16.7715 8.08796 16.637 8.03257 16.4955 8.03257Z" fill="white" />
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="contacts__c">
+                            © 2024 by SCREENL
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal" id="confModal">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <div class="modal__close">
+                <button class="close-btn _close-modal">
+                    <img src="img/close.svg" alt="">
+                </button>
+            </div>
+            <div class="text">
+
+                <p>
+                    Предоставляя свои персональные данные Пользователь даёт согласие на обработку, хранение и использование своих персональных данных на основании ФЗ № 152-ФЗ «О персональных данных» от 27.07.2006 г. в следующих целях:
+                </p>
+
+                <ul>
+                    <li>Осуществление клиентской поддержки;</li>
+                    <li>Проведения аудита и прочих внутренних маркетинговых исследований</li>
+                </ul>
+
+                <p>
+                    Под персональными данными подразумевается любая информация личного характера, позволяющая установить личность Пользователя/Покупателя такая как:
+                </p>
+
+                <ul>
+                    <li>Фамилия, Имя, Отчество;</li>
+                    <li>Контактный телефон;</li>
+                    <li>Адрес электронной почты.</li>
+                </ul>
+
+                <p>
+                    Персональные данные Пользователей хранятся исключительно на электронных носителях и обрабатываются с использованием автоматизированных систем, за исключением случаев, когда неавтоматизированная обработка персональных данных необходима в связи с исполнением требований законодательства. <br>
+                Компания обязуется не передавать полученные персональные данные третьим лицам, за исключением следующих случаев:
+                </p>
+
+                <p>
+                    По запросам уполномоченных органов государственной власти РФ только по основаниям и в порядке, установленным законодательством РФ; <br>
+                Стратегическим партнерам, которые работают с Компанией для предоставления продуктов и услуг, или тем из них, которые помогают Компании реализовывать продукты и услуги потребителям. Мы предоставляем третьим лицам минимальный объем персональных данных, необходимый только для оказания требуемой услуги или проведения необходимой транзакции.
+                </p>
+
+                <p>
+                    Компания оставляет за собой право вносить изменения в одностороннем порядке в настоящие правила, при условии, что изменения не противоречат действующему законодательству РФ. Изменения условий настоящих правил вступают в силу после их публикации на Сайте
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/swiper-bundle.min.js"></script>
+    <script type="x-shader/x-fragment" id="vertShader">
+        precision mediump float;
+
+    varying vec2 vUv;
+    attribute vec2 a_position;
+
+    void main() {
+        vUv = .5 * (a_position + 1.);
+        gl_Position = vec4(a_position, 0.0, 1.0);
+    }
+</script>
+    <script type="x-shader/x-fragment" id="fragShader">
+        precision mediump float;
+
+    varying vec2 vUv;
+    uniform float u_time;
+    uniform float u_ratio;
+    uniform vec2 u_pointer_position;
+    uniform float u_scroll_progress;
+
+    vec2 rotate(vec2 uv, float th) {
+        return mat2(cos(th), sin(th), -sin(th), cos(th)) * uv;
+    }
+
+    float neuro_shape(vec2 uv, float t, float p) {
+        vec2 sine_acc = vec2(0.);
+        vec2 res = vec2(0.);
+        float scale = 8.;
+
+        for (int j = 0; j < 15; j++) {
+            uv = rotate(uv, 1.);
+            sine_acc = rotate(sine_acc, 1.);
+            vec2 layer = uv * scale + float(j) + sine_acc - t;
+            sine_acc += sin(layer);
+            res += (.5 + .5 * cos(layer)) / scale;
+            scale *= (1.2 - .07 * p);
+        }
+        return res.x + res.y;
+    }
+
+    void main() {
+        vec2 uv = .5 * vUv;
+        uv.x *= u_ratio;
+
+        vec2 pointer = vUv - u_pointer_position;
+        pointer.x *= u_ratio;
+        float p = clamp(length(pointer), 0., 3.);
+        p = .5 * pow(1. - p, 2.);
+
+        float t = .0006 * u_time;
+        vec3 color = vec3(0.);
+
+        float noise = neuro_shape(uv, t, p);
+
+        noise = 1.0 * pow(noise, 4.);
+        noise += pow(noise, 3.);
+        noise = max(.0, noise - .3);
+        noise *= (1. - length(vUv - .1));
+
+        color = normalize(vec3(.1, .2 + .0, .8 + .8));
+
+        color = color * noise;
+
+        gl_FragColor = vec4(color, noise);
+    }
+</script>
+    <script src="js/main.min.js"></script>
+
+</body>
+
+</html>
